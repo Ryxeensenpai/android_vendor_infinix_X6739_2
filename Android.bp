@@ -3986,39 +3986,6 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_library_shared {
-    name: "lbs_hidl_service-impl",
-    owner: "infinix",
-    strip: {
-        none: true,
-    },
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/lib64/lbs_hidl_service-impl.so",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libhardware",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libutils",
-                "vendor.mediatek.hardware.lbs@1.0",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_library_shared {
     name: "lib3a.ae.core",
     owner: "infinix",
     strip: {
@@ -23979,15 +23946,6 @@ prebuilt_etc_xml {
 }
 
 prebuilt_etc_xml {
-    name: "lbs_hidl_service@1.0.xml",
-    owner: "infinix",
-    src: "proprietary/vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml",
-    filename_from_src: true,
-    sub_dir: "vintf/manifest",
-    soc_specific: true,
-}
-
-prebuilt_etc_xml {
     name: "manifest_android.hardware.drm@1.4-service.widevine.xml",
     owner: "infinix",
     src: "proprietary/vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml",
@@ -25022,40 +24980,6 @@ cc_prebuilt_binary {
                 "libMcClient",
                 "libcutils",
                 "liblog",
-                "libc++",
-                "libc",
-                "libm",
-                "libdl",
-            ],
-        },
-    },
-    compile_multilib: "64",
-    strip: {
-        none: true,
-    },
-    prefer: true,
-    soc_specific: true,
-}
-
-cc_prebuilt_binary {
-    name: "lbs_hidl_service",
-    owner: "infinix",
-    target: {
-        android_arm64: {
-            srcs: [
-                "proprietary/vendor/bin/lbs_hidl_service",
-            ],
-            shared_libs: [
-                "liblog",
-                "libcutils",
-                "libbase",
-                "libhardware",
-                "libbinder",
-                "libhidlbase",
-                "libhidltransport",
-                "libutils",
-                "vendor.mediatek.hardware.lbs@1.0",
-                "lbs_hidl_service-impl",
                 "libc++",
                 "libc",
                 "libm",
